@@ -2,7 +2,9 @@
 title: "BankChurners"
 author: "Jarod Wright"
 date: "6/9/2021"
-output: rmarkdown::github_document
+output: 
+  html_document:
+    keep_md: true
 ---
 <style type="text/css">
   body{
