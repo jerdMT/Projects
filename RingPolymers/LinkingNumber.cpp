@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <math.h>
-#include <vector>
+#include <vector> 
 #include <cstdlib>
 #include <string>
 #include <algorithm>
@@ -246,13 +246,13 @@ STREAM << "(" << a << "," << b << ")" <<std::endl;
  }
 
  auto start = high_resolution_clock::now();
-  for(int i=100; i<NumberofChainPairs; i++) // i was changed here to cover the second 100-block
+  for(int i=0; i<NumberofChainPairs; i++) // i was changed here to cover the second 100-block
   {
      //i is ID
      
      
       	  
-      for (int j=100; j<=NumberofChainPairs; j++)
+      for (int j=0; j<=NumberofChainPairs; j++)
       { 	//j is ID1
        
 
