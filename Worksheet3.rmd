@@ -1,0 +1,52 @@
+---
+title: "Worksheet 3"
+author: "Jarod Wright"
+date: "9/9/2021"
+output: pdf_document
+---
+
+```{r , message=FALSE}
+library(dplyr)
+set.seed(123)
+#task 1
+a1<-dbinom(6,10,0.5)
+print(a1)
+b1<-dbinom(4,10,0.5)+dbinom(5, size=10, 0.5)
+print(b1)
+c1<-pbinom(3,10,0.5)
+print(c1)
+d1<-sum(dbinom(6:10,10,0.5))
+print(d1)
+#P(X>=x) DNE P(X>x)
+dAlt1 <- pbinom(5,10,0.5,lower.tail = F)
+
+
+```
+
+```{r , message=FALSE}
+a2 = pnorm(-2.15)
+print(a2)
+b2 = pnorm(2.54,lower.tail = F)
+print(b2)
+c2 = pnorm(1.96)-pnorm(-1.96)
+print(c2)
+d2 = qnorm(0.025)
+print(d2)
+e = qnorm(0.05,lower.tail = F)
+print(e)
+f = qnorm(0.01/2)#symmetry
+print(f)
+```
+
+```{r , message=FALSE}
+data <- rnorm(200)
+hist(data,main = "Normal Sample",col = "red")
+subdata = sample(data,100,replace = T)
+hist(subdata,main = "Subset", col = "blue")
+mean(subdata)
+sd(subdata)
+
+#print(as.list(.GlobalEnv))
+as.table(a1,b1,c1,d1,a2,b2,c2,d2,e,f)
+```
+
